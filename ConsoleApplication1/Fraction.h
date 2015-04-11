@@ -4,7 +4,6 @@ class Fraction
 public:
 	//Constructor
 	Fraction();
-	Fraction(int, int, int);
 	
 	Fraction operator+(Fraction &);
 	Fraction operator-(Fraction &);
