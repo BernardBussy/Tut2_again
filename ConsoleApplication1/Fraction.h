@@ -10,7 +10,7 @@ public:
 	Fraction operator-(Fraction &);
 	Fraction operator/(Fraction &);
 	Fraction operator*(Fraction &);
-
+	Fraction operator=(Fraction &);
 	void setnumerator(int);
 	void setdenominator(int);
 	void setwholenumber(int);
@@ -18,7 +18,9 @@ public:
 	void Print();
 	//Destructor
 	~Fraction();
-
+	
+	friend std::ostream& operator<<(std::ostream&, const Fraction &);
+	friend std::istream& operator>>(std::istream &, Fraction &);
 private:
 	int wholenumber, numerator, denominator;
 	
